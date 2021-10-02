@@ -21,8 +21,8 @@ social:
     icon_pack: fab
     link: https://www.linkedin.com/in/fernandorakovsky/
 organizations:
-  - name: Stanford University
-    url: https://www.stanford.edu/
+  - name: Universidad Católica del uruguay
+    url: https://ucu.edu.uy/es
 education:
   courses:
     - course: PhD in Artificial Intelligence
