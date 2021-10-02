@@ -38,9 +38,20 @@ email: ""
 superuser: true
 highlight_name: true
 ---
+<!--StartFragment-->
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+#### Soy un estudiante de ingeniería en informática y amante de la tecnología.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+##### Aquí podrás conocer un poco sobre mí y los proyectos en los que he trabajado de forma individual o colaborativa. Te invito a conocerme.
+
+<!--EndFragment-->
+
+Hola, soy Fernando Rakovsky, un Uruguayo de 32 años. Comence la carrera de Ingerniería en Informática en la UCU en el 2014. Actualemente estoy cursando las últimas cuatro materias que me faltan para recibirme de Ingeniero.
+
+Me encanta todo lo referente a la tecnología y soy fanático de android. En mi tiempo libre me gusta mucho leer e investigar sobre nuevos productos o tecnologías.
+
+Actualmente trabajo en la auditoría interna de BPS desde octubre de 2017, lo que implica un manejo de datos muy importante.
+
+
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
