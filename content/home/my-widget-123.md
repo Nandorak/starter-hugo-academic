@@ -5,7 +5,7 @@ headless: true
 weight: 50
 title: Nueva homepage
 subtitle: Funcionara?
-active: true
+active: false
 design:
   columns: "2"
   background:
