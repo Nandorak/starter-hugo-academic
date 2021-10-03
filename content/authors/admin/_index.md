@@ -1,7 +1,7 @@
 ---
 title: Fernando Rakovsky
 role: Estudiante de Ingeniería en informática
-avatar_filename: avatar.jpg
+avatar_filename: yo.jpg
 bio: Soy un estudiante de ingeniería en informática, amante de la tecnología y
   fiel a android.
 interests:
