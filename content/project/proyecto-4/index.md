@@ -1,0 +1,13 @@
+---
+title: proyecto 4
+subtitle: subtitulo del proyecto 4
+date: 2021-10-03T15:02:44.536Z
+summary: Soy el resumen del proyecto 4
+draft: false
+featured: false
+image:
+  filename: ""
+  focal_point: ""
+  preview_only: false
+---
+Soy el cuerpo del proyecto 4
