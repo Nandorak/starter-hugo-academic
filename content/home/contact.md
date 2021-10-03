@@ -27,4 +27,7 @@ content:
   
 design:
   columns: '2'
+  
+advanced:
+  css_style: 'padding: 50px 0 50px 0'
 ---
