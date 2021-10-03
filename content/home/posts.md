@@ -38,4 +38,7 @@ design:
   #   3 = Card
   #   4 = Citation (publication only)
   view: 2
+  
+advanced:
+  css_style: 'padding: 60px 0 60px 0'
 ---
