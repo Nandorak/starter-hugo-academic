@@ -21,7 +21,4 @@ design:
   # Minimum and maximum font sizes (1.0 = 100%).
   font_size_min: 0.7
   font_size_max: 2.0
-  spacing:
-    # Customize the section spacing. Order is top, right, bottom, left.
-    padding: ["50px", "0", "50px", "0"]
 ---
