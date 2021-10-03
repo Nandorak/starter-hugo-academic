@@ -45,4 +45,7 @@ design:
 
   # For Showcase view, flip alternate rows?
   flip_alt_rows: false
+  
+advanced:
+  css_style: 'padding: 60px 0 60px 0'
 ---
