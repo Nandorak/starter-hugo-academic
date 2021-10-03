@@ -20,7 +20,7 @@ image:
   caption: "Image credit: [**KNIME**](knime.png)"
   focal_point: ""
   placement: 2
-  preview_only: false
+  preview_only: true
 ---
 ![knime](knime.png "Árbol de regresión simple para predicción")
 
@@ -57,3 +57,5 @@ Aquí se puede ver el resultado obtenido de la predicción comparado con los val
 ## Operador “Numeric Scorer”
 
 ![](image3.png)
+
+Este operador brinda información detallada de las estadísticas obtenidas del modelo. Un MSE muy cercano a cero quiere decir que el modelo funciona muy bien.
