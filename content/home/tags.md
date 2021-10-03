@@ -22,7 +22,6 @@ design:
   font_size_min: 0.7
   font_size_max: 2.0
 
-
 advanced:
-  css_style: 'padding: 50px 0 50px 0'
+  css_style: 'padding: 60px 0 60px 0'
 ---
