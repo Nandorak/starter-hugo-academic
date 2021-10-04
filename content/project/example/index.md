@@ -16,7 +16,9 @@ title: Advertising (parte 1)
 tags:
   - rStudio
   - regresión lineal
-links: []
+links:
+  - url: Advertising.csv
+    name: Descargar dataset
 image:
   caption: ""
   focal_point: ""
