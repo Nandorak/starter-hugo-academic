@@ -22,7 +22,8 @@ image:
 > automatically through experience. Applications range from data mining programs that
 > discover general rules in large data sets, to information filtering systems that
 > automatically learn users' interests.<https://www.ieeesmc.org/technical-activities/cybernetics/machine-learning>
->
+
+
 > Machine learning es una forma de la IA que permite a un sistema aprender de los
 > datos en lugar de aprender mediante la programación explícita. Sin embargo,
 > machine learning no es un proceso sencillo. Conforme el algoritmo ingiere datos de
@@ -33,7 +34,8 @@ image:
 > algoritmo predictivo creará un modelo predictivo. A continuación, cuando
 > proporcione el modelo predictivo con datos, recibirá un pronóstico basado en los
 > datos que entrenaron al modelo. <https://www.ibm.com/cl-es/analytics/machine-learning>
->
+
+
 > Machine learning is a field of computer science that aims to teach computers how to
 > learn and act without being explicitly programmed. More specifically, machine
 > learning is an approach to data analysis that involves building and adapting models,
