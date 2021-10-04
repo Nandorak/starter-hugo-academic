@@ -20,6 +20,7 @@ links: []
 image:
   caption: ""
   focal_point: ""
+  preview_only: true
 url_code: ""
 ---
 En esta primera parte se realizara una regresión lineal simple (con rStudio) para el conjunto de datos de Advertising. La idea de ellos es ver cual de las otras variables explica mejor las ventas.
