@@ -16,8 +16,8 @@ links:
   - url: Advertising.csv
     name: Descargar dataset
 image:
-  filename: ""
-  focal_point: ""
+  filename: featured.jpg
+  focal_point: Smart
   preview_only: false
 ---
 En esta primera parte se realizara una regresión lineal simple (con rStudio) para el conjunto de datos de Advertising. La idea de ellos es ver cual de las otras variables explica mejor las ventas.
