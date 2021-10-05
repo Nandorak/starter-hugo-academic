@@ -25,6 +25,8 @@ image:
   preview_only: true
 url_code: ""
 ---
+![]()
+
 En esta primera parte se realizara una regresión lineal simple (con rStudio) para el conjunto de datos de Advertising. La idea de ellos es ver cual de las otras variables explica mejor las ventas.
 
 ## Cargamos las librerías necesarias
@@ -347,7 +349,7 @@ plot(datos$TV, datos$sales, main = 'Ventas vs. Gasto TV', col = 'red')
 abline(reg.tv)
 ```
 
-![](output_31_0.png)
+![](featured.jpg)
 
 Calculamos la otra medida de performance del modelo: R-cuadrado
 
@@ -487,8 +489,6 @@ head(datos)
 plot(datos$newspaper, datos$sales, main = 'Ventas vs. Gasto prensa escrita', col = 'red')
 abline(reg.news)
 ```
-
-![](output_45_0.png)
 
 ```R
 # ECM en testing
