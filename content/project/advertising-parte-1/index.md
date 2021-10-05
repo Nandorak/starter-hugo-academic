@@ -13,7 +13,7 @@ tags:
 categories:
   - Predicción
 image:
-  filename: ""
+  filename: featured.jpg
   focal_point: ""
   preview_only: true
 ---
@@ -487,10 +487,7 @@ abline(reg.news)
 mean((datos$sales[test] - datos$sales_pred_news[test])**2)
 ```
 
-
 26.9688971447639
-
-
 
 ```R
 # R-cuadrado en testing
@@ -498,5 +495,6 @@ corel <- cor(datos$sales[test], datos$sales_pred_news[test])
 corel**2
 ```
 
-
 0.0431605481381341
+
+Próximamente parte 2
