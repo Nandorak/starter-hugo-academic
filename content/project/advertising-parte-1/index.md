@@ -12,6 +12,9 @@ tags:
   - rStudio
 categories:
   - Predicción
+links:
+  - url: Advertising.csv
+    name: Descargar dataset
 image:
   filename: ""
   focal_point: ""
