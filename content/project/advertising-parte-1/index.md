@@ -13,9 +13,9 @@ tags:
 categories:
   - Predicción
 image:
-  filename: featured.jpg
+  filename: ""
   focal_point: ""
-  preview_only: true
+  preview_only: false
 ---
 En esta primera parte se realizara una regresión lineal simple (con rStudio) para el conjunto de datos de Advertising. La idea de ellos es ver cual de las otras variables explica mejor las ventas.
 
@@ -122,7 +122,7 @@ hist(datos$newspaper, col = 'red', main = 'Gasto en Diarios')
 hist(datos$sales, col = 'green', main = 'Ventas')
 ```
 
-![](output_10_0.png)
+![](1.png)
 
 ```R
 # gráficos bivariados: se crean los diagramas de dispersión que relacionan las ventas vs. el gasto en c/medio
@@ -132,7 +132,7 @@ plot(datos$radio, datos$sales, col = 'red', main = 'Gasto en Radio')
 plot(datos$newspaper, datos$sales, col = 'red', main = 'Gasto en Prensa')
 ```
 
-![](output_11_0.png)
+![](2.png)
 
 Notar que a través de los gráficos anteriores ya podemos visualizar la fortaleza de la relación de los gastos publicitarios con las ventas. Parecería que el gasto en TV tiene una relación más fuerte que el gasto en Prensa escrita (newspaper). Esta es una hipótesis que deberemos confirmar en nuestro análisis posterior de regresión.
 
@@ -339,7 +339,7 @@ plot(datos$TV, datos$sales, main = 'Ventas vs. Gasto TV', col = 'red')
 abline(reg.tv)
 ```
 
-![](output_31_0-copia.jpg)
+![](3.png)
 
 Calculamos la otra medida de performance del modelo: R-cuadrado
 
@@ -412,7 +412,7 @@ plot(datos$radio, datos$sales, main = 'Ventas vs. Gasto Radio', col = 'red')
 abline(reg.radio)
 ```
 
-![](output_39_0.png)
+![](4.png)
 
 ```R
 # ECM en testing
@@ -480,7 +480,7 @@ plot(datos$newspaper, datos$sales, main = 'Ventas vs. Gasto prensa escrita', col
 abline(reg.news)
 ```
 
-![](output_45_0.png)
+![](5.png)
 
 ```R
 # ECM en testing
