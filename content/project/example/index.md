@@ -349,7 +349,7 @@ plot(datos$TV, datos$sales, main = 'Ventas vs. Gasto TV', col = 'red')
 abline(reg.tv)
 ```
 
-![](output_31_0.png)
+![](output_31_0-copia.jpg)
 
 Calculamos la otra medida de performance del modelo: R-cuadrado
 
