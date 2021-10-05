@@ -13,7 +13,7 @@ tags:
 categories:
   - Predicción
 image:
-  filename: featured.jpg
+  filename: ""
   focal_point: ""
   preview_only: true
 ---
