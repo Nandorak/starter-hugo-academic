@@ -6,7 +6,7 @@ summary: Aquí veremos las etapas que componen a CRISP-DM, KDD y SEMMA. También
 draft: false
 featured: false
 tags:
-  - DRISP-DM
+  - CRISP-DM
   - KDD
   - SEMMA
 categories:
