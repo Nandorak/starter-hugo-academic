@@ -27,3 +27,13 @@ El dataset cuenta con 12 atributos y 1.309 registros.
 * Port of Embarkation: puerto de embarcación (2 variables faltantes)
 * Life Boat: numero del bote salvavidas (823 variables faltantes)
 * Survived: indica si el pasajero sobrevivió o no, puede ser *Yes* o *No*
+
+## Relaciones entre variables
+
+![Life Boat vs Survived](lifeboat-survived.png "Life Boat vs Survived")
+
+La imagen anterior muestra una alta correlación indicando que la gran mayoría de los pasajeros que tenían un bote salvavidas tenían muchísimas probabilidades de sobrevivir, por lo que esta variable no será tenida en cuenta para este estudio.
+
+![Passanger Fare vs Sex](passengerfare-sex.png "Passanger Fare vs Sex")
+
+El grafico anterior nos muestra que las mujeres (principalmente las que tickets mas caros) sobrevivieron mas que los hombres.
