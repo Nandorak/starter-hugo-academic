@@ -34,10 +34,26 @@ El dataset cuenta con 12 atributos y 1.309 registros.
 
 La imagen anterior muestra una alta correlación indicando que la gran mayoría de los pasajeros que tenían un bote salvavidas tenían muchísimas probabilidades de sobrevivir, por lo que esta variable no será tenida en cuenta para este estudio.
 
-Para este estudio tampoco se tendrán en cuenta el *Ticket Number* y *Name* (nombre de los pasajeros) ya que estos son únicamente un identificador. Además, la la variable *Cabin* tampoco será tenida en cuenta (debido a la elevada cantidad de atributos faltantes que posee).
+Para este estudio tampoco se tendrán en cuenta el *Ticket Number* y *Name* (nombre de los pasajeros) ya que estos son únicamente identificadores. 
 
 
 
 ![Passanger Fare vs Sex](passengerfare-sex.png "Passanger Fare vs Sex")
 
 El grafico anterior nos muestra que las mujeres (principalmente las que tickets mas caros) sobrevivieron mas que los hombres.
+
+## Atributos faltantes
+
+Con respecto a la variable *Cabin*, como el 77% de los atributos es faltante, lo correcto es no tener en cuenta esta variable para el estudio ya que intentar obtener un valor para estos nos puede llevar a un resultado erróneo.
+
+La variable Age, solamente con 263 atributos faltantes, para estos se les generara el promedio de todas las edades que se incluyan en el dataset.
+
+Con respecto a la variable Passenger Fare, en la cual había un observación de la cual no se contaban con registros se omitirá toda esa fila.
+
+A continuación se muestra el proceso llevado a cabo hasta el momento en RapidMiner
+
+![Proceso en RapidMiner hasta la matriz de correlación](procesopreviomatriz.png "Proceso en RapidMiner hasta la matriz de correlación")
+
+Como se observa en la siguiente imagen, prácticamente no hay atributos que estén altamente correlacionados.
+
+![Matriz de correlación](matriz.png "Matriz de correlación")
