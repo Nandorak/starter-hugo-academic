@@ -34,6 +34,10 @@ El dataset cuenta con 12 atributos y 1.309 registros.
 
 La imagen anterior muestra una alta correlación indicando que la gran mayoría de los pasajeros que tenían un bote salvavidas tenían muchísimas probabilidades de sobrevivir, por lo que esta variable no será tenida en cuenta para este estudio.
 
+Para este estudio tampoco se tendrán en cuenta el *Ticket Number* y *Name* (nombre de los pasajeros) ya que estos son únicamente un identificador. Además, la la variable *Cabin* tampoco será tenida en cuenta (debido a la elevada cantidad de atributos faltantes que posee).
+
+
+
 ![Passanger Fare vs Sex](passengerfare-sex.png "Passanger Fare vs Sex")
 
 El grafico anterior nos muestra que las mujeres (principalmente las que tickets mas caros) sobrevivieron mas que los hombres.
