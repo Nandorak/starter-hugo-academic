@@ -41,3 +41,5 @@ Este dataset cuenta con 506 registros (ninguno es faltante) y 14 atributos refer
 * B: 1000 (Bk - 0.63) ^ 2 donde Bk es la proporción de afrodescendientes por ciudad
 * LSTAT: % menor estado de la población
 * MEDV: valor medio de las viviendas ocupadas por el propietario en $ 1000
+
+## Relación entre variables
