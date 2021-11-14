@@ -51,7 +51,7 @@ Este dataset cuenta con 506 registros (ninguno es faltante) y 14 atributos refer
 
 ## Relación entre variables
 
-Para tener un acercamiento a la relación entre las variables se adjunta una tabla obtenida de los datos a través de RStudio. Este grafico nos puede dar una rápida visión de las variables que se puedan encontrar correlacionadas. En esta entrada, te muestro los pasos a realizar para obtener este grafico: Enlace
+Para tener un acercamiento a la relación entre las variables se adjunta una tabla obtenida de los datos a través de RStudio. Este grafico nos puede dar una rápida visión de las variables que se puedan encontrar correlacionadas. En esta entrada, te muestro los pasos a realizar para obtener este grafico: <https://fernandorakovsky.netlify.app/post/graficos-de-correlaciones/>
 
 ![Gráfico bi-variables ](rplot03.png "Gráfico bi-variables ")
 
