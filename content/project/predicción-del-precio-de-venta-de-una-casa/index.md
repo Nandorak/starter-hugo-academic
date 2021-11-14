@@ -12,6 +12,9 @@ tags:
   - regresión lineal múltiple
   - feature selection
 categories: []
+links:
+  - url: housing.csv
+    name: Descargar dataset
 image:
   filename: featured.jpg
   focal_point: ""
