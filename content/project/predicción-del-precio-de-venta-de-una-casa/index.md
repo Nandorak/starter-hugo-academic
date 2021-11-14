@@ -59,4 +59,10 @@ Dentro del proceso *Split Validation*, agregamos los operadores que se encuentra
 
 ![](parte1-validation.png)
 
+Aquí en el operador *Performance*, selecciona los parámetros: squared error, correlation y squared correlation.
+
+Si antes de ejecutor el proceso, le agregamos un punto de interrupción al operador Linear Regression (clic derecho encima, Breakpoint After), el programa nos mostrara las variables que el modelo considera importante para estos datos. Sería conveniente trabajar solamente con las que tengan 4 asteriscos.
+
+![Importancia de las variables](importancia.png "Importancia de las variables")
+
 Texto
