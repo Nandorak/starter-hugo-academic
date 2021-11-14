@@ -1,8 +1,11 @@
 ---
 title: Predicción del precio de venta de una casa
 subtitle: ""
-date: 2021-11-13T14:13:34.818Z
-draft: true
+date: 2021-10-14T00:56:00.000Z
+summary: Se realiza una regresión lineal con feature selection al data set
+  Housing (de Boston) con el fin de predecir el precio de un inmueble de acuerdo
+  a las características del mismo y del entorno.
+draft: false
 featured: false
 tags:
   - algoritmo lineal
@@ -10,7 +13,7 @@ tags:
   - feature selection
 categories: []
 image:
-  filename: ""
+  filename: featured.jpg
   focal_point: ""
   preview_only: false
 ---
@@ -61,8 +64,18 @@ Dentro del proceso *Split Validation*, agregamos los operadores que se encuentra
 
 Aquí en el operador *Performance*, selecciona los parámetros: squared error, correlation y squared correlation.
 
-Si antes de ejecutor el proceso, le agregamos un punto de interrupción al operador Linear Regression (clic derecho encima, Breakpoint After), el programa nos mostrara las variables que el modelo considera importante para estos datos. Sería conveniente trabajar solamente con las que tengan 4 asteriscos.
+Si antes de ejecutor el proceso, le agregamos un punto de interrupción al operador Linear Regression (clic derecho encima, Breakpoint After), el programa nos mostrara las variables que el modelo considera importante para estos datos. Sería conveniente trabajar solamente con las que tengan 4 estrellas ya que a estas RapidMiner las considera altamente significativas.
 
 ![Importancia de las variables](importancia.png "Importancia de las variables")
 
-Texto
+En la siguiente imagen se pueden obtener los coeficientes de los atributos lo que permite obtener la predicción para un elemento x.
+
+![Coeficientes](coeficientes.png "Coeficientes")
+
+Hasta ahora, hemos trabajado solamente con el conjunto de entrenamiento, ya es hora de que le apliquemos el modelo creado a nuestro conjunto de test (los registros que teníamos guardados por el momento del 451 al 506). Para esto agregaremos un operador *Apply Model* para aplicar nuestro modelo al conjunto de test, luego en el operador *Rename* renombraremos la variable MEDV (Prediction) a predictedMEDV para poder operar con ella en el operador *Generate Attributes* creando una variable Diferencias (predictedMEDV - MEDV). El modelo final queda como la imagen Parte2
+
+![Parte 2](parte-2.png "parte 2")
+
+A modo de exposición, se muestra los primeros 15 resultados obtenidos del conjunto de test.
+
+![Resultado](resultado.png "Resultado")
