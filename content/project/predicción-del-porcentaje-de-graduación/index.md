@@ -1,9 +1,9 @@
 ---
 title: Predicción del porcentaje de graduación
 date: 2021-11-15T22:04:58.042Z
-summary: Se intentará predecir la variable Grad.Rate a traves de una Regresion
-  Lineal Simple, y tambien a traves de Random Forest. Se compararan los
-  resultados obtenidos y sacaran conclusiones.
+summary: Se intentará predecir la variable Grad.Rate a traves de una Regresión
+  Lineal, y también a través de Random Forest. Se compararan los resultados
+  obtenidos y sacaran conclusiones.
 draft: false
 featured: true
 tags:
