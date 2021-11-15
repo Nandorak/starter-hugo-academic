@@ -5,13 +5,16 @@ summary: Se intentará predecir la variable Grad.Rate a traves de una Regresion
   Lineal Simple, y tambien a traves de Random Forest. Se compararan los
   resultados obtenidos y sacaran conclusiones.
 draft: false
-featured: false
+featured: true
 tags:
   - regresión lineal
   - random forest
   - feature selection
 categories:
   - Predicción
+links:
+  - url: proyecto.R
+    name: Descargar código R
 image:
   filename: featured.jpg
   focal_point: ""
