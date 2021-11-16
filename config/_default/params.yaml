@@ -94,7 +94,7 @@ comments:
     publication: true
     event: true
   disqus:
-    shortname: 'fernandorakovsky'
+    shortname: 'fernandorakovsky-netlify-app'
     show_count: true
   commento:
     url: ''
