@@ -34,6 +34,6 @@ design:
   #   4 = Citation (publication only)
   view: 3
   
- advanced:
+advanced:
   css_style: 'padding: 60px 0 60px 0'
 ---
