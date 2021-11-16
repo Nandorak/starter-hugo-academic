@@ -94,7 +94,7 @@ comments:
     publication: true
     event: true
   disqus:
-    shortname: '@fernandorakovsky'
+    shortname: 'fernandorakovsky'
     show_count: true
   commento:
     url: ''
