@@ -25,7 +25,13 @@ organizations:
   - name: Universidad Católica del uruguay
     url: https://ucu.edu.uy/es
 education:
-  courses: []
+  courses:
+    - course: Ingeniería en Informática
+      institution: UCU
+      year: 2021
+    - course: Analítica de Negocios
+      institution: ORT
+      year: 2019
 email: ""
 superuser: true
 highlight_name: true
@@ -37,5 +43,3 @@ Me encanta todo lo referente a la tecnología y soy fanático de android. En mi 
 Actualmente trabajo en la auditoría interna de BPS desde octubre de 2017, lo que implica un manejo de datos muy importante.
 
 Aquí podrás conocer un poco sobre mí y los proyectos en los que he trabajo de forma individual o colaborativa. Te invito a conocerme.
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
