@@ -18,4 +18,7 @@ title: Biografía
 # This should be the username (folder name) of a profile in your `content/authors/` folder.
 # See https://wowchemy.com/docs/get-started/#introduce-yourself
 author: admin
+
+advanced:
+  css_style: 'padding: 60px 0 60px 0'
 ---
