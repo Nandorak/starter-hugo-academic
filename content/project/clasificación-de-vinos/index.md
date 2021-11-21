@@ -41,3 +41,8 @@ Excepto el atributo Clase (variable objetivo que indica el tipo de vino), los re
 * OD280/OD315 of diluted wines
 * Proline
 
+## Análisis exploratorio
+
+Se identifican 178 observaciones las que 59 corresponden al tipo de vino 1, 71 al tipo de vino 2 y 48 al tipo de vino 3 de acuerdo a la siguiente imagen:
+
+![Clases de vino](clases.png "Clases de vino")
