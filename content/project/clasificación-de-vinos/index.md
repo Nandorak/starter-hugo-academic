@@ -11,6 +11,7 @@ tags:
   - k-NN
   - performance
   - naive bayes
+  - RapidMiner
 categories:
   - Clasificación
 image:
