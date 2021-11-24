@@ -16,6 +16,9 @@ tags:
 categories:
   - RStudio
   - Clustering
+links:
+  - name: Descargar código R
+    url: usarrest.r
 image:
   filename: featured.jpg
   focal_point: ""
@@ -62,7 +65,7 @@ head(x)
 pairs(x)
 ```
 
-Priemeros elementos del dataset:
+Primeros 6 elementos del dataset:
 
 ```
 > head(x)
@@ -89,7 +92,7 @@ Resultado luego de la normalización:
 
 ![Datos normalizados](rplot01.png "Datos normalizados")
 
-Ahora obtendremos el valor de **Hopkins**. Este es un indicador determina la calidad de un conjunto de datos a la hora de crear clusters. Tiende a 1 cuando los datos son altamente clusterizables, y a 0,5 o menos cuando no es así.
+Ahora obtendremos el valor de **Hopkins**. Este es un indicador que determina la calidad de un conjunto de datos a la hora de crear clusters. Tiende a 1 cuando los datos son altamente clusterizables, y a 0,5 o menos cuando no es así.
 
 ```
 #Obtenemos el valor de Hopkins
@@ -107,7 +110,7 @@ $hopkins_stat
 $plot
 ```
 
-Este resultado de Hopkins indica que no será ,uy bueno el resultado obtenido de estos clusterizar estos datos. Luego veremos si los podemos mejorar.
+Este resultado de Hopkins indica que no será muy bueno el resultado obtenido al momento de clusterizar estos datos. Luego veremos si los podemos mejorar.
 
 Ahora calcularemos la **silueta**, este indicador nos indica la cantidad optima de clusters para el conjunto de datos que estemos trabajando.
 
