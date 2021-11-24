@@ -7,8 +7,10 @@ summary: Aquí veremos algunos de los mejores software de aprendizaje automátic
 draft: false
 featured: false
 tags:
-  - machine learning
-  - herramientas
+  - TensorFlow
+  - RapidMiner
+  - Weka 3
+  - KNIME
 categories:
   - Información
 image:
