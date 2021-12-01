@@ -22,7 +22,7 @@ image:
 ---
 ## Presentación del caso de estudio
 
-Para este trabajo se hará uso de la base de datos College provista por el paquete ISLR de r, en la que se se buscara predecir la variable *Grad.Rate* en base a otros atributos que describen una universidad.
+Para este trabajo se hará uso de la base de datos College provista por el paquete ISLR de r, en la que se buscara predecir la variable *Grad.Rate* en base a otros atributos que describen las caracteristicas de una universidad.
 
 Arriba de este proyecto podrás descargar el código fuente (en r) que fue la base para este informe.
 
@@ -31,8 +31,7 @@ Unidos correspondientes a la edición de 1995 de US News and World Report.
 
 ## Entendimiento de caso de uso y planificación del trabajo
 
-Para responder esta pregunta se realizará un modelo supervisado en el que se hará una
-regresión para predecir la variable *Grad.Rate*. Se utilizaran dos modelos distintos, una Regresión Lineal Simple y Random Forest. Para estos se analizara su comportamiento realizando comparativas entre ambos y concluiremos con las conclusiones de los casos.
+Se realizara un modelo supervisado en el que se hará una regresión para predecir la variable *Grad.Rate*. Se utilizaran dos modelos distintos, una Regresión Lineal Simple y Random Forest. Para estos se analizara su comportamiento realizando comparativas entre ambos y finalizaremos con las conclusiones de los casos expuestos.
 
 ## Extracción, transformación y carga de datos
 
@@ -91,7 +90,11 @@ A continuación, se muestra un boxplot de *Grad.Rate*, la variable que se intent
 
 ![Boxplot de Grad.Rate](rplot01.png "Boxplot de Grad.Rate")
 
-Se aprecian muy poquitos outliers, pero estos son considerados como insignificantes ya que la eliminación de los mismos no alteraría el resultado final de los modelos planteados en el presente informe.
+Aquí es necesario corregir estos outliers, si estamos hablando de porcentajes, no es coherente la existencia de uno que sea 118% (este se convirtió a 100). Además, los 4 valores menores a 20, se convirtieron a 20. De esta forma no tenemos mas outliers en nuestra Label.
+
+ 
+
+![Grad.Rate sin outliers](boxplot.png "Grad.Rate sin outliers")
 
 A continuación, se muestra un ploteo entre la variable Grad.Rate y Ouststate en la que se ve su relación, siendo esta ultima una de las variables mas importantes como se verá más adelante.
 
@@ -99,13 +102,13 @@ A continuación, se muestra un ploteo entre la variable Grad.Rate y Ouststate en
 
 El siguiente cuadro me pareció importante incorporarlo ya que demuestra que no importa que se haya tenido las mejores notas en el liceo, esto no implicara que en la universidad se obtengan muy buenos resultados.
 
-![Grad.Rate vs Top10perc](rplot02.png "Grad.Rate vs Top10perc")
+![Grad.Rate vs Top10perc](top10perc.png "Grad.Rate vs Top10perc")
 
 ### Matriz de correlación
 
 La siguiente matriz de correlación se le aplico a toda la base College, esto nos mostrara la relación entre las diferentes variables de este modelo.
 
-![Matriz de correlación](rplot03.png "Matriz de correlación")
+![Matriz de correlación](correlacion.png "Matriz de correlación")
 
 Esta matriz nos da un indicio de que hay variables con una fuerte correlación positiva entre sí, a modo de ejemplo la variable Enroll con las variables Apps y Accept, es posible entonces que algunas de estas variables muy asociadas entre sí no sean significativas para el modelo, tal cual ser verá más adelante en el trabajo con el modelo de Regresión Lineal.
 
@@ -121,29 +124,29 @@ siguientes resultados (pequeña extracción de summary):
 ```
 Coefficients:
               Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 30.9028063  5.6392939   5.480 6.60e-08 ***
-PrivateYes   5.1386014  2.0122856   2.554  0.01094 *  
-Apps         0.0016161  0.0005187   3.116  0.00193 ** 
-Accept      -0.0010415  0.0009395  -1.109  0.26815    
-Enroll       0.0036580  0.0026286   1.392  0.16463    
-Top10perc    0.0346841  0.0834505   0.416  0.67785    
-Top25perc    0.1439920  0.0628210   2.292  0.02229 *  
-F.Undergrad -0.0007524  0.0004572  -1.646  0.10041    
-P.Undergrad -0.0011875  0.0004241  -2.800  0.00529 ** 
-Outstate     0.0010547  0.0002599   4.058 5.70e-05 ***
-Room.Board   0.0014166  0.0006724   2.107  0.03562 *  
-Books        0.0001457  0.0030228   0.048  0.96157    
-Personal    -0.0023993  0.0008519  -2.816  0.00504 ** 
-PhD          0.1236968  0.0634113   1.951  0.05162 .  
-Terminal    -0.0843641  0.0693802  -1.216  0.22454    
-S.F.Ratio    0.2291859  0.1885424   1.216  0.22469    
-perc.alumni  0.2193759  0.0547650   4.006 7.07e-05 ***
-Expend      -0.0004226  0.0001970  -2.145  0.03240 *  
+(Intercept) 30.4574822  5.5729462   5.465 7.14e-08 ***
+PrivateYes   5.2045054  1.9886106   2.617  0.00912 ** 
+Apps         0.0016361  0.0005125   3.192  0.00150 ** 
+Accept      -0.0011846  0.0009285  -1.276  0.20259    
+Enroll       0.0038452  0.0025977   1.480  0.13940    
+Top10perc    0.0345468  0.0824687   0.419  0.67545    
+Top25perc    0.1427174  0.0620819   2.299  0.02190 *  
+F.Undergrad -0.0007396  0.0004518  -1.637  0.10222    
+P.Undergrad -0.0011986  0.0004191  -2.860  0.00440 ** 
+Outstate     0.0010675  0.0002568   4.156 3.77e-05 ***
+Room.Board   0.0013805  0.0006645   2.077  0.03824 *  
+Books        0.0001332  0.0029872   0.045  0.96446    
+Personal    -0.0023439  0.0008419  -2.784  0.00556 ** 
+PhD          0.1344993  0.0626652   2.146  0.03230 *  
+Terminal    -0.0859281  0.0685640  -1.253  0.21067    
+S.F.Ratio    0.2257821  0.1863241   1.212  0.22614    
+perc.alumni  0.2163186  0.0541207   3.997 7.33e-05 ***
+Expend      -0.0004322  0.0001947  -2.220  0.02684 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ```
 
-La columna t value muestra la prueba t asociada con la prueba de significancia del parámetro que figura en la primer columna, Pr (>│t│) proporciona el p valor de esa prueba t. Entendiendo que la hipótesis nula en nuestro modelo es que la variable de la primer columna no es significativa para explicar el Grad.Rate, por lo general se considera que un valor p de 0.05 o menos rechaza dicha hipótesis, considerando entonces a ese parámetro como significativo. Las restantes variables podrían por lo tanto ser desechadas.
+La columna *t value* muestra la prueba t asociada con la prueba de significancia del parámetro que figura en la primer columna, Pr (>│t│) proporciona el p valor de esa prueba t. Entendiendo que la hipótesis nula en nuestro modelo es que la variable de la primer columna no es significativa para explicar Grad.Rate, por lo general se considera que un valor p de 0.05 o menos rechaza dicha hipótesis, considerando entonces a ese parámetro como significativo. Las restantes variables podrían por lo tanto ser desechadas.
 
 Debido a que trabajar con todas las variables del modelo podría agotar mucho tiempo y recursos en la obtención de los mismos y no nos aportarían gran relevancia, como se apreció en el apartado de análisis descriptivo de los datos, la matriz de correlación nos indicó que en nuestra base de análisis hay variables con una alta colinealidad o correlación. Por lo expuesto procederemos a utilizar *step* para que nos indique cuales serán las variables recomendadas para trabajar. El resultado debería ser similar al que arroja el estudio de p valor visto anteriormente.
 
@@ -169,21 +172,21 @@ lm(formula = Grad.Rate ~ Private + Apps + Top25perc + P.Undergrad +
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--43.034  -7.203  -0.411   6.423  53.119 
+-42.691  -7.161  -0.388   6.603  50.781 
 
 Coefficients:
               Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 32.4366243  3.4524075   9.395  < 2e-16 ***
-PrivateYes   5.5564280  1.9264538   2.884 0.004081 ** 
-Apps         0.0010348  0.0002021   5.120 4.28e-07 ***
-Top25perc    0.1661595  0.0369100   4.502 8.28e-06 ***
-P.Undergrad -0.0014028  0.0003960  -3.542 0.000432 ***
-Outstate     0.0009620  0.0002519   3.819 0.000150 ***
-Room.Board   0.0013690  0.0006544   2.092 0.036922 *  
-Personal    -0.0027008  0.0008228  -3.282 0.001096 ** 
-PhD          0.0623316  0.0427785   1.457 0.145683    
-perc.alumni  0.2247804  0.0538921   4.171 3.54e-05 ***
-Expend      -0.0003978  0.0001595  -2.493 0.012959 *  
+(Intercept) 31.9176421  3.4135985   9.350  < 2e-16 ***
+PrivateYes   5.6014864  1.9047982   2.941  0.00342 ** 
+Apps         0.0010172  0.0001998   5.090 4.97e-07 ***
+Top25perc    0.1659687  0.0364951   4.548 6.72e-06 ***
+P.Undergrad -0.0014004  0.0003916  -3.576  0.00038 ***
+Outstate     0.0009650  0.0002491   3.874  0.00012 ***
+Room.Board   0.0013238  0.0006471   2.046  0.04126 *  
+Personal    -0.0026318  0.0008135  -3.235  0.00129 ** 
+PhD          0.0714951  0.0422977   1.690  0.09156 .  
+perc.alumni  0.2229852  0.0532862   4.185 3.34e-05 ***
+Expend      -0.0004008  0.0001577  -2.541  0.01134 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ```
@@ -199,33 +202,31 @@ Para medir la precisión del modelo de Regresión Lineal Simple se hizo un *post
 ```
 > postResample(regresionLineal,graduacionOriginal)
       RMSE   Rsquared        MAE 
-11.8745199  0.4874459  9.0114746 
+11.7410366  0.4930572  8.9728433 
 ```
 
-Finalmente, con este modelo se aplicó la predicción a nuestro juego de datos de test (collegeTest) obteniendo lo siguiente:
+Finalmente, con este modelo se aplicó la predicción a nuestro juego de datos de test (collegeTest) obteniendo el siguiente resultado:
 
 ```
 > postResample(pred = regresionLineal2, obs = graduacionOriginalTest)
       RMSE   Rsquared        MAE 
-14.4538787  0.3833957 10.7741790 
+14.2168124  0.3879399 10.6987405 
 ```
 
-Como se puede apreciar, el resultado de la predicción del conjunto de test es prácticamente el mismo que le predicción realizada a nuestro conjunto de entrenamiento. Se puede entonces considerar que, para conjuntos desconocidos, el modelo predecirá correctamente.
+Como se puede apreciar, el resultado de la predicción del conjunto de entrenamiento es un poco mejor que en el conjunto de test. Sin embargo, no hay que entusiasmarse tratando de encontrar mejores y mejores valores para el conjunto de entrenamiento ya que esto puede producir un alto grado de overfitting. Lo importante es ver como se compara el RMSE en diferentes modelos en el conjunto de test.
 
 ### Random Forest
 
-Para esta técnica en un principio se considero usar el mismo conjunto de variables acotados con el cual se quedo nuestro modelo final de Regresión Simple, pero sabiendo cómo funciona Random Forest decidimos que esto no era necesario.
-
 Antes de ejecutar el Random Forest, se buscó la optimización del mismo buscando los valores apropiados tanto para el ntree como para el mtry.
 
-Luego de esta optimización y para los valores de seed elegidos se llegó a la conclusión de que los valores óptimos para su ejecución son 700 para ntree y 4 para el mtry. Se utilizó como criterio para la selección el menor valor de RMSE.
+Luego de esta optimización y para los valores de seed elegidos se llegó a la conclusión de que los valores óptimos para su ejecución son 800 para ntree y 2 para el mtry. Se utilizó como criterio para la selección el menor valor de RMSE.
 
 A continuación se expone el postResample de nuestro conjunto de entrenamiento:
 
 ```
 > postResample(randForestFinal,graduacionOriginal)
      RMSE  Rsquared       MAE 
-5.1595314 0.9343246 3.7850920 
+5.4185570 0.9242982 3.9941331 
 ```
 
 Aplicado este modelo al conjunto de test:
@@ -233,12 +234,12 @@ Aplicado este modelo al conjunto de test:
 ```
 > postResample(pred = randForest2, obs = graduacionOriginalTest)
       RMSE   Rsquared        MAE 
-14.3802518  0.3942109 10.7726276 
+14.3822119  0.3777601 10.8279685 
 ```
 
 ## Conclusiones
 
-1. Si bien el modelo de Random Forest predice mejor para el conjunto de entrenamiento, arroja resultados similares al modelo de Regresión Lineal para los conjuntos de test.
+1. Si bien el modelo de Random Forest predice mucho mejor para el conjunto de entrenamiento, arroja resultados similares al modelo de Regresión Lineal para los conjuntos de test.
 2. Los buenos resultados obtenidos con el método de Regresión Lineal pueden ser
    explicados por un comportamiento bastante lineal de la propia base College.
 3. Luego de comparar resultados, se considera que para la predicción de *Grade.Rate* es mejor utilizar el método de Regresión Lineal Simple ya que es más sencilla su interpretación, no exige grandes cálculos computacionales y sobre todo arroja resultados similares en el conjunto de test comparados con Random Forest.
@@ -249,4 +250,20 @@ Las técnicas aplicadas fueron ejecutadas con varias seeds distintas, obteniendo
 
 ### Posibles ampliaciones
 
-Como posibles ampliaciones o mejoras a este trabajo se le podría agregar *cross validation* a la Regresion Lineal Simple siendo  esta técnica utilizada para la evaluación de resultados la cual garantiza la independencia entre el subconjunto de datos de entrenamiento y test.
+Como posibles ampliaciones o mejoras a este trabajo se le podría agregar K-fold *cross validation* a la Regresión Lineal Simple siendo  esta técnica utilizada para la evaluación de resultados la cual garantiza la independencia entre el subconjunto de datos de entrenamiento y test.
+
+### Mejora (agregado posteriormente)
+
+Para los modelos anteriores, se utilizo random forest con cross validation pero para la regresión lineal simple lo que se utilizo fue la base de datos particionada en dos conjuntos, el 70% de las observaciones fueron utilizadas para el entrenamiento, mientras que el otro 30% fueron utilizadas para test.
+
+De esta forma se divide el el dataset en k-folds diferentes (en este caso fueron 10) para asegurar que todas las observaciones sean utilizadas como entrenamiento y también cono test de forma disjunta. Esto como se menciono en las posibles ampliaciones garantiza la independencia de datos del conjunto de entrenamiento y test.
+
+```
+Resampling results:
+
+  RMSE     Rsquared   MAE     
+  12.6463  0.4551071  9.574706
+
+```
+
+Como se aprecia en la imagen anterior este modelo es mucho mas optimo ya que el RMSE es bastante mas bajo que el calculado anteriormente.
