@@ -13,7 +13,7 @@ tags:
 categories:
   - Predicción
 links:
-  - url: proyecto.R
+  - url: proyectoSinOutliersRF.R
     name: Descargar código R
 image:
   filename: featured.jpg
