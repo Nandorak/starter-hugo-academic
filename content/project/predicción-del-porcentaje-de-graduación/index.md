@@ -92,8 +92,6 @@ A continuación, se muestra un boxplot de *Grad.Rate*, la variable que se intent
 
 Aquí es necesario corregir estos outliers, si estamos hablando de porcentajes, no es coherente la existencia de uno que sea 118% (este se convirtió a 100). Además, los 4 valores menores a 20, se convirtieron a 20. De esta forma no tenemos mas outliers en nuestra Label.
 
- 
-
 ![Grad.Rate sin outliers](boxplot.png "Grad.Rate sin outliers")
 
 A continuación, se muestra un ploteo entre la variable Grad.Rate y Ouststate en la que se ve su relación, siendo esta ultima una de las variables mas importantes como se verá más adelante.
@@ -118,8 +116,7 @@ Para esta predicción utilizaremos dos métodos, Regresión Lineal Simple y Rand
 
 ### Regresión Lineal Simple
 
-Para esta técnica, primeramente, se ejecutó el método con todas las variables, obteniendo los
-siguientes resultados (pequeña extracción de summary):
+Para esta técnica, primeramente, se ejecutó el método con todas las variables, obteniendo los siguientes resultados (pequeña extracción de summary):
 
 ```
 Coefficients:
@@ -145,10 +142,6 @@ Expend      -0.0004322  0.0001947  -2.220  0.02684 *
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ```
-
-La columna *t value* muestra la prueba t asociada con la prueba de significancia del parámetro que figura en la primer columna, Pr (>│t│) proporciona el p valor de esa prueba t. Entendiendo que la hipótesis nula en nuestro modelo es que la variable de la primer columna no es significativa para explicar Grad.Rate, por lo general se considera que un valor p de 0.05 o menos rechaza dicha hipótesis, considerando entonces a ese parámetro como significativo. Las restantes variables podrían por lo tanto ser desechadas.
-
-Debido a que trabajar con todas las variables del modelo podría agotar mucho tiempo y recursos en la obtención de los mismos y no nos aportarían gran relevancia, como se apreció en el apartado de análisis descriptivo de los datos, la matriz de correlación nos indicó que en nuestra base de análisis hay variables con una alta colinealidad o correlación. Por lo expuesto procederemos a utilizar *step* para que nos indique cuales serán las variables recomendadas para trabajar. El resultado debería ser similar al que arroja el estudio de p valor visto anteriormente.
 
 Para identificar la colinealidad entre las variables usaremos factores de inflación de varianza (VIF). En este análisis cuanto mayor es el valor del VIF, mayor es la colinealidad. Calculamos entonces el VIF para cada variable y vamos eliminando aquellas con valores altos. La definición de 'alto' que tomaremos para este ejercicio es un VIF > 5.
 
@@ -263,7 +256,6 @@ Resampling results:
 
   RMSE     Rsquared   MAE     
   12.6463  0.4551071  9.574706
-
 ```
 
 Como se aprecia en la imagen anterior este modelo es mucho mas optimo ya que el RMSE es bastante mas bajo que el calculado anteriormente.
