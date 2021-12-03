@@ -143,7 +143,7 @@ Expend      -0.0004322  0.0001947  -2.220  0.02684 *
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ```
 
-Para identificar la colinealidad entre las variables usaremos factores de inflación de varianza (VIF). En este análisis cuanto mayor es el valor del VIF, mayor es la colinealidad. Calculamos entonces el VIF para cada variable y vamos eliminando aquellas con valores altos. La definición de 'alto' que tomaremos para este ejercicio es un VIF > 5.
+Para identificar la colinealidad entre las variables usaremos factores de inflación de varianza (VIF (1)). En este análisis cuanto mayor es el valor del VIF, mayor es la colinealidad. Calculamos entonces el VIF para cada variable y vamos eliminando aquellas con valores altos. La definición de 'alto' que tomaremos para este ejercicio es un VIF > 5.
 
 La eliminación de variables individuales de forma simultanea con valores altos de VIF en la comparación inicial no es lo ideal, ya que los valores de VIF cambiarán después de eliminar cada variable. Por lo expuesto, realizaremos un enfoque gradual, eliminando la variable con VIF más alto y ejecutando nuevamente, repitiendo el proceso hasta que todos los valores VIF estén por debajo del umbral deseado (menor a 5 en nuestro caso). El resultado final de este proceso se expone a continuación:
 
@@ -259,3 +259,7 @@ Resampling results:
 ```
 
 Como se aprecia en la imagen anterior este modelo es mucho mas optimo ya que el RMSE es bastante mas bajo que el calculado anteriormente.
+
+### Bibliografía
+
+1- Kutner, M. H.; Nachtsheim, C. J.; Neter, J. (2004). Applied Linear Regression Models (4th edición). McGraw-Hill Irwin.
